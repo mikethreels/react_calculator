@@ -1,2 +1,9 @@
-// eslint-disable-next-line no-console
-console.log('hello world');
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <h1>Hello World</h1>
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
