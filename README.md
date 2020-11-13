@@ -1,5 +1,5 @@
 # React calculator App
-
+This is a calculator app build with React
 
 ![screenshot](./src/images/app_screenshot.png)
 
@@ -9,6 +9,10 @@
 - Javascript
 - HTML
 - CSS
+- Node.js
+- React
+- React-DOM
+- npm
 
 ## Live Demo
 
@@ -19,18 +23,14 @@
 
 To get a local copy up and running follow these simple example steps.
 
-- Git clone https://github.com/mikethreels/weather_app
-- Open the index.html inside the dist folder with your favorite browser
-- Explore the website
+- Git clone https://github.com/mikethreels/react_calculator
+- Move to the root directory in your command line
+- run `npm install`
+- run `npm start`
 
 ### Usage
 
-- When opening the browser the user will be prompted to allow location visibility
-- If the location is denied the app will select a default city
-- If the location is allowed the weather for the users current location will be viewed
-- The User can search for other cities as well
-- If the city exsists it will be displayed in the window
-- if the city does not exsist the current city will be shown and the user will be prompted.
+- 
 
 ## Author
 👤 Michael Threels
