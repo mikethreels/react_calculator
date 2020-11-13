@@ -4,7 +4,9 @@ import ButtonPanel from './button_panel';
 import Calculate from '../logic/calculate';
 
 export default function App() {
-  Calculate();
+  const temp = Calculate;
+  // eslint-disable-next-line no-console
+  console.log(temp);
   return (
     <>
       <Display />
