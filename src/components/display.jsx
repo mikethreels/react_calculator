@@ -1,8 +1,7 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-export default function Display(props) {
+function Display(props) {
   const { amount } = props;
   return (
     <div className="display">
@@ -18,3 +17,5 @@ Display.defaultProps = {
 Display.propTypes = {
   amount: PropTypes.string,
 };
+
+export default Display;

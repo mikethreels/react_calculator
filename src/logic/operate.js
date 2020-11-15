@@ -11,7 +11,7 @@ export default function Operate(numberOne, numberTwo, operation) {
     case '-':
       result = numOne.minus(numTwo);
       break;
-    case '*':
+    case 'X':
       result = numOne.times(numTwo);
       break;
     case '÷':
@@ -20,5 +20,5 @@ export default function Operate(numberOne, numberTwo, operation) {
     default:
       break;
   }
-  return result;
+  return result.toString();
 }
