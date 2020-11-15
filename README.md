@@ -30,7 +30,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage
 
-- 
+The application works like a normal calculator it includes below calulation possibilities.
+- multiply
+- divide
+- add
+- subtract
 
 ## Author
 👤 Michael Threels
