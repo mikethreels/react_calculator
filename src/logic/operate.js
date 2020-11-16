@@ -11,14 +11,21 @@ export default function Operate(numberOne, numberTwo, operation) {
     case '-':
       result = numOne.minus(numTwo);
       break;
-    case '*':
+    case 'X':
       result = numOne.times(numTwo);
       break;
     case '÷':
-      result = numOne.div(numTwo);
+      result = numberTwo === '0' ? 'Err div by 0' : numOne.div(numTwo);
+      break;
+    case '+/-':
+      if (numberOne == null) {
+        result = numTwo.times(-1);
+      } else {
+        result = numOne.times(-1);
+      }
       break;
     default:
       break;
   }
-  return result;
+  return result.toString();
 }

@@ -2,20 +2,22 @@ import Operate from './operate';
 
 const Calculate = ((object, buttonName) => {
   let { total, next, operation } = object;
-  const operator = /[x,+,÷,-]/;
+  const operator = /[X,+,÷,-]/;
+  total = total === 'Err div by 0' ? null : total;
   switch (buttonName) {
     case 'AC':
       total = null;
       next = null;
+      operation = null;
       break;
     case '+/-':
-      total *= -1;
-      next *= -1;
+      total = total == null ? total : Operate(total, -1, 'X');
+      next = next == null ? next : Operate(-1, next, 'X');
       break;
     case '%':
-      total /= 100;
+      total = Operate(total, 100, '÷');
       break;
-    case operator.includes(buttonName):
+    case operator.test(buttonName) && buttonName:
       if (operation && next) {
         total = Operate(total, next, operation);
       } else {
@@ -32,6 +34,8 @@ const Calculate = ((object, buttonName) => {
     case '=':
       if (operation && next) {
         total = Operate(total, next, operation);
+        next = null;
+        operation = null;
       }
       break;
     default:
@@ -42,6 +46,12 @@ const Calculate = ((object, buttonName) => {
       }
       break;
   }
+
+  return {
+    total,
+    next,
+    operation,
+  };
 });
 
 export default Calculate;

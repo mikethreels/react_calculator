@@ -8,14 +8,14 @@ button {
 }
 
 .panel {
-  width: 30%;
+  width: 35%;
   margin: auto;
 }
 
 .display {
   background-color: rgb(0, 0, 73);
   color: white;
-  width: 30%;
+  width: 35%;
   height: 70px;
   font-size: 70px;
   margin: auto;
