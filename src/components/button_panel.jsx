@@ -13,9 +13,9 @@ function ButtonPanel(props) {
         <Button key="÷" name="buttongroup1last" clickHandler={handleClick} buttonName="÷" />
       </div>
       <div className="group2">
+        <Button key="7" name="buttongroup2" clickHandler={handleClick} buttonName="7" />
         <Button key="8" name="buttongroup2" clickHandler={handleClick} buttonName="8" />
         <Button key="9" name="buttongroup2" clickHandler={handleClick} buttonName="9" />
-        <Button key="7" name="buttongroup2" clickHandler={handleClick} buttonName="7" />
         <Button key="X" name="buttongroup2last" clickHandler={handleClick} buttonName="X" />
       </div>
       <div className="group3">

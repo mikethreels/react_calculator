@@ -8,17 +8,18 @@ const Calculate = ((object, buttonName) => {
     case 'AC':
       total = null;
       next = null;
+      operation = null;
       break;
     case '+/-':
-      total *= -1;
-      next *= -1;
+      total = total == null ? total : Operate(total, -1, 'X');
+      next = next == null ? next : Operate(-1, next, 'X');
       break;
     case '%':
-      total /= 100;
+      total = Operate(total, 100, '÷');
       break;
     case operator.test(buttonName) && buttonName:
       if (operation && next) {
-        total = Operate(total, next, operation);
+        total = operation === '÷' && next === '0' ? 'error' : Operate(total, next, operation);
       } else {
         operation = buttonName;
       }
