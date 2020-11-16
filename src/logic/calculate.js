@@ -3,7 +3,7 @@ import Operate from './operate';
 const Calculate = ((object, buttonName) => {
   let { total, next, operation } = object;
   const operator = /[X,+,÷,-]/;
-
+  total = total === 'Err div by 0' ? null : total;
   switch (buttonName) {
     case 'AC':
       total = null;
@@ -19,7 +19,7 @@ const Calculate = ((object, buttonName) => {
       break;
     case operator.test(buttonName) && buttonName:
       if (operation && next) {
-        total = operation === '÷' && next === '0' ? 'error' : Operate(total, next, operation);
+        total = Operate(total, next, operation);
       } else {
         operation = buttonName;
       }
